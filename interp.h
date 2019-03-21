@@ -1,6 +1,4 @@
-#include "util.h"
 #include "slp.h"
-
 typedef struct table *Table_;
 struct table
 {

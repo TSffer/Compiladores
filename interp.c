@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "util.h"
 #include "interp.h"
 
 static int LOOK_UP_VALID = 1;
@@ -54,7 +55,7 @@ Table_ interpStm(A_stm s,Table_ t)
     }
     else
     {
-        assert(!"ag");
+        assert(!"----------");
     }
 }
 
@@ -89,7 +90,7 @@ struct IntAndTable interExp(A_exp e, Table_ t)
             case A_times: it.i = left.i * right.i; break;
             case A_div  : it.i = left.i / right.i; break;
             default:
-                assert(!"agg");
+                assert(!"--------------");
         }
         it.t = right.t;
         return it;
@@ -103,7 +104,7 @@ struct IntAndTable interExp(A_exp e, Table_ t)
     }
     else
     {
-        assert(!"aggg");
+        assert(!"-----------");
     }   
 };
 

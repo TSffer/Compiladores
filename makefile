@@ -16,7 +16,7 @@ slp.o: slp.c slp.h util.h
 util.o: util.c util.h
 	cc -g -c util.c
 
-interp.o: interp.c interp.h
+interp.o: interp.c interp.h util.h
 	cc -g -c interp.c
 
 clear:

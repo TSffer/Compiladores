@@ -103,8 +103,9 @@ int maxargs(A_stm a_stm)
 
 int main()
 {
-    printf(">>Right Prog Section:\n");
-    printf("the maximum numer of arguments of any print statement is %i\n",maxargs(prog()));
+    //printf(">>Right Prog Section:\n");
+    printf("Numero de argumentos: %i\n",maxargs(prog()));
+    printf("----------------------\n");
     printf("Interpert:\n");
     interp(prog());
     return 0;
