@@ -1,10 +1,10 @@
 run: a.out
 	./a.out
 	
-a.out: main.o prog1.o slp.o util.o
-	cc -g main.o prog1.o slp.o util.o
+a.out: main.o prog1.o slp.o util.o interp.o
+	cc -g main.o prog1.o slp.o util.o interp.o
 
-main.o: main.c slp.h util.h
+main.o: main.c slp.h util.h 
 	cc -g -c main.c
 
 prog1.o: prog1.c slp.h util.h
@@ -16,5 +16,8 @@ slp.o: slp.c slp.h util.h
 util.o: util.c util.h
 	cc -g -c util.c
 
+interp.o: interp.c interp.h
+	cc -g -c interp.c
+
 clear:
-	rm -f a.out util.o prog1.o slp.o main.o
+	rm -f a.out util.o prog1.o slp.o main.o interp.o

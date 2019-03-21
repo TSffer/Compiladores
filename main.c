@@ -2,6 +2,8 @@
 #include "util.h"
 #include "slp.h"
 #include "prog1.h"
+#include "interp.h"
+
 /*
 int exp_helper(A_expList list)
 {
@@ -103,6 +105,7 @@ int main()
 {
     printf(">>Right Prog Section:\n");
     printf("the maximum numer of arguments of any print statement is %i\n",maxargs(prog()));
-
+    printf("Interpert:\n");
+    interp(prog());
     return 0;
 }
