@@ -46,15 +46,6 @@ int maxargs(A_stm prog)
 }
 */
 
-/*
-int bigger(int first, int second) { return first > second ? first : second; } int argsOfExp(A_exp exp) { if (NULL == exp) return 0; switch (exp->kind) { case A_idExp: return 0; case A_numExp: return 0; case A_opExp: return bigger(argsOfExp(exp->u.op.left), argsOfExp(exp->u.op.right)); case A_eseqExp: return bigger(maxargs(exp->u.eseq.stm), argsOfExp(exp->u.eseq.exp)); } return 0; } int argsOfExps(A_expList exps) { if (NULL == exps) return 0; switch (exps->kind) { case A_lastExpList: return 1; case A_pairExpList: return bigger(argsOfExp(exps->u.pair.head), 1 + argsOfExps(exps->u.pair.tail)); } return 0; } int maxargs(A_stm a_stm) { if (NULL == a_stm) return 0; switch (a_stm->kind) { case A_compoundStm: return bigger(maxargs(a_stm->u.compound.stm1), maxargs(a_stm->u.compound.stm2)); case A_assignStm: return argsOfExp(a_stm->u.assign.exp); case A_printStm: return argsOfExps(a_stm->u.print.exps); } return 0; }
---------------------- 
-作者：hareyukai 
-来源：CSDN 
-原文：https://blog.csdn.net/guothin/article/details/80216506 
-版权声明：本文为博主原创文章，转载请附上博文链接！
-*/
-
 int bigger(int first, int second)
 {
     return first > second ? first : second;
