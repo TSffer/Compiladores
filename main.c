@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include "util.h"
 #include "slp.h"
-#include "prog1.h"
+#include "util.h"
 #include "interp.h"
+//#include "maxargs.h"
+#include "prog1.h"
 
 /*
 int exp_helper(A_expList list)
@@ -104,9 +105,9 @@ int maxargs(A_stm a_stm)
 int main()
 {
     //printf(">>Right Prog Section:\n");
-    printf("Numero de argumentos: %i\n",maxargs(prog()));
-    printf("----------------------\n");
-    printf("Interpert:\n");
+    printf("maxargs: %d\n",maxargs(prog()));
+    printf("interpret:\n");
     interp(prog());
+
     return 0;
 }

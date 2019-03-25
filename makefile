@@ -1,8 +1,8 @@
 run: a.out
 	./a.out
 	
-a.out: main.o prog1.o slp.o util.o interp.o
-	cc -g main.o prog1.o slp.o util.o interp.o
+a.out: main.o prog1.o slp.o util.o maxargs.o interp.o
+	cc -g main.o prog1.o slp.o util.o maxargs.o interp.o
 
 main.o: main.c slp.h util.h 
 	cc -g -c main.c
@@ -16,8 +16,11 @@ slp.o: slp.c slp.h util.h
 util.o: util.c util.h
 	cc -g -c util.c
 
-interp.o: interp.c interp.h util.h
+interp.o: interp.c interp.h 
 	cc -g -c interp.c
 
+maxargs.o: maxargs.c maxargs.h
+	cc -g -c maxargs.c
+
 clear:
-	rm -f a.out util.o prog1.o slp.o main.o interp.o
+	rm -f a.out util.o prog1.o slp.o main.o maxargs.o interp.o
