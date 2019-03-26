@@ -1,0 +1,2 @@
+magicNum := 42
+adding := magicNum + (42)
