@@ -15,7 +15,8 @@ Token *scan_string(char **buf)
 
     if(in_multiline_comment)
     {
-        if(c == "*")
+        //printf("Holasssss");
+        if(c == '*')
         {
             if(read_character(buf) == '/')
             {
@@ -33,12 +34,11 @@ Token *scan_string(char **buf)
     switch (c)
     {
         case ':':
-            if(read_character(buf) == "=")
+            if(read_character(buf) == '=')
             {
                 return token_new(ASSIGN, ":=",2);
             }
             unread_character(buf);
-        
         case '+':
             return token_new(PLUS,"+",1);
         case '-':
@@ -47,7 +47,7 @@ Token *scan_string(char **buf)
             return token_new(TIMES,"*",1);
         case '/':
             c = read_character(buf);
-            if(c = '/')
+            if(c == '/')
             {
                 int  len = 2;
                 while((c = read_character(buf)) && c != '\n' && c != EOF)

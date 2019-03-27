@@ -1,2 +1,1 @@
-magicNum := 42
-adding := magicNum + (42)
+magicNum := 42 adding := magicNum + (42 - 19) /* hola*/
